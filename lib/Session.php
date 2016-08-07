@@ -293,5 +293,29 @@ class Session
     {
         return $this->destroy();
     }
+
+    /**
+     * Returns the entire session array
+     *
+     * @access public
+     *
+     * @return array
+     */
+    public function all()
+    {
+        return $_SESSION;
+    }
+
+    /**
+     * Populate or update the entire session array
+     *
+     * @access public
+     *
+     * @param   mixed   $session Array of data to populate the session
+     */
+    public function setAll($session = null)
+    {
+        $_SESSION = $session;
+    }
     
 }
